@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {%block link%}
+    {%endblock%}
+<!-- </head> -->
+<body>
+    <div class="stepper-wrapper">
+        <!-- completed / active -->
+        {%block step1%}
+        {%endblock%}
+          <div class="step-counter"></div>
+          <div class="step-name">Name</div>
+        </div>
+            {%block step2%}
+    {%endblock%}
+
+          <div class="step-counter"></div>
+          <div class="step-name">Description</div>
+        </div>
+            {%block step3%}
+    {%endblock%}
+
+          <div class="step-counter"></div>
+          <div class="step-name">Photos</div>
+        </div>
+            {%block step4%}
+    {%endblock%}
+
+          <div class="step-counter"></div>
+          <div class="step-name">Price</div>
+        </div>
+      </div>
+
+    {%block content%}
+    {%endblock%}
+</body>
+</html>

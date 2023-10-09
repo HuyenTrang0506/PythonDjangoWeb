@@ -1,0 +1,75 @@
+.component {
+    position: relative;
+    margin: 0 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+    
+  .component .title {
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.8px;
+    line-height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px auto; /* Center horizontally */
+    text-align: center; /* Center the text within the h1 element */
+    font-size: xxx-large;
+  }
+
+  .component .subtitle {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .component .photo-tips {
+    font-family: "Montserrat-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 25px;
+    line-break: 0.5px;
+    line-height: 30px;
+    width: 45%;
+    /* text-align: justify; */
+  }
+    
+  .component .overlap-group {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    top: 150px;
+    left: 409px;
+  }
+  
+  .component .rectangle {
+    top: 0;
+    left: 15vw;
+    opacity: 0.5;
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background-color: #d9d9d9;
+  }
+  
+  .component .text-wrapper-5 {
+    position: absolute;
+    top: 65px;
+    left: 31px;
+    font-family: "Public Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+  .component .text-wrapper-6 {
+    position: absolute;
+    top: 47px;
+    left: 45px;
+    font-family: "Public Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 60px;
+    letter-spacing: -1.2px;
+    line-height: 30px;
+    white-space: nowrap;
+  }

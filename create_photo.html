@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Photo</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="css/fontawesome/css1/all.css" />
+    <link rel="stylesheet" href="./css/style_createphoto.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <nav
+      class="navbar navbar-expand-sm fixed-top"
+      style="background-color: #1ca76c; color: white"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" style="margin-left: 100px">
+          <i class="fa-solid fa-recycle px-1"></i>
+          <span>Recourcicle</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto"></ul>
+          <form class="d-flex" style="scale: 1.4; margin-right: 100px">
+            <i class="fa-regular fa-comment px-3"></i>
+            <i class="fa-regular fa-user px-3"></i>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- STEP BAR -->
+
+    <div class="stepbar">
+      <img
+        src="./images/step3.png"
+        alt="step4"
+        class="step4"
+        style="width: 50%"
+      />
+    </div>
+    <!-- CONTENT -->
+    <div class="bigtext">
+      <div class="photo">Photos</div>
+
+      <h5>Add as many as you can so buyers can see every detail.</h5>
+    </div>
+    <div class="main">
+      <div class="text">
+        <p class="tips">Tips</p>
+        <div class="list-tips">
+          <ul->
+            <li class="mini-item">Use daylight, no flash.</li>
+            <li class="mini-item">Put something common nearby your size.</li>
+            <li class="mini-item">Shoots against a clear backdrop.</li>
+            <li class="mini-item">Include pictures of different choice.</li>
+          </ul->
+        </div>
+      </div>
+      <div class="images container">
+        <div class="row">
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+          <div class="col-sm-4 item">
+            <img src="./images/greyimage.png" alt="" />
+          </div>
+          <div
+            class="col-sm-4 item newItem"
+            style="
+              background-color: rgba(239, 238, 238, 0.842);
+              scale: 0.9;
+              text-align: center;
+              padding-top: 22px;
+            "
+          >
+            <h1>+</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">NEXT -></button>
+  </body>
+</html>

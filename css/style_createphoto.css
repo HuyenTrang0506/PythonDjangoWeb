@@ -1,0 +1,63 @@
+.stepbar{
+  text-align: center;
+ margin-top: 85px;
+ padding-bottom: 25px;
+ border-bottom:3px solid #1CA76C ;
+}
+.bigtext{
+    width: 50%;
+    margin:20px auto;
+    text-align: center;
+}
+.bigtext .photo{
+    font-size: 2rem;
+        font-weight: bold;
+}
+.main{
+    display: flex;
+    width: 40%;
+   margin: auto;
+   
+}
+.main .text{
+    width: 55%;
+}
+.main .images {
+    width: 55%;
+    margin-bottom: 25px;
+
+}
+.main .text .tips{
+    font-size: 1.15rem;
+}
+.main li{
+    padding-bottom: 6px;
+    padding-left: 17px;
+    padding-right: 10px;
+}
+
+.main .images .item{
+padding: 6px;
+
+}
+.main .images img {
+   width: 90px;
+   height: 90px;
+}
+.main .images img:hover{
+    scale: 1.05;
+    transition: 0.2s;
+}
+
+.btn{
+    color: white;
+   
+    padding: 15px 70px;
+    background-color: #1CA76C;
+   margin-left: 70%;
+   border-radius:30px ;
+}.btn:hover{
+   
+    scale: 1.05;
+    transition: 0.2s;
+}

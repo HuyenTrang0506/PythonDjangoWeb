@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'style_step2.css' %}">
+{% endblock link %}
+
+{%block step1%}
+    <div class="stepper-item completed">
+{%endblock%}
+
+{%block step2%}
+    <div class="stepper-item active">
+{%endblock%}
+
+{%block step3%}
+    <div class="stepper-item ">
+{%endblock%}
+
+{%block step4%}
+    <div class="stepper-item ">
+{%endblock%}
+
+{%block content%}
+<h1 >Product information</h1>
+<div class="component">
+  <form method="post">
+      {% csrf_token %}
+      {{ form.description }}
+  <div class="tag">
+    <div class="tag description">
+      <p class="title">Tag</p>
+      <p class="p">What words might someone use to search for your product?</p>
+    </div>
+    <input type="text" class="tag-input">
+  </div>
+  <div class="category">
+    <!-- <button class="category-button">Add</button> -->
+    <div class="catgory-description">
+      <p class="title">Category</p>
+      <p class="p">Choose the right category for the product</p>
+    </div>
+    <input class="category-input" type="text">
+  </div>
+  <div class="des">
+    <div class="description-description">
+      <p class="title">Description for {{ product_name }}</p>
+      <p class="p">
+        Begin by crafting a concise introduction that showcases the standout qualities of your item. Remember, shoppers
+        will initially have eyes on just the initial lines of your description, so seize this opportunity to make a
+        compelling impact!
+      </p>    
+    </div>
+        {% comment %} {{ form.description.errors }} {% endcomment %}
+        <div class="button-line">
+            <a href="{% url 'first_step' %}" ><button class="back btn"> ← BACK</button></a>
+            <button type="submit" class="btn">NEXT →</button>
+        </div>
+    </form>
+</div>
+{%endblock%}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'style_step3.css' %}">
+{% endblock link %}
+
+{% block step1 %}
+<div class="stepper-item completed">
+{% endblock %}
+
+{% block step2 %}
+<div class="stepper-item completed">
+{% endblock %}
+
+{% block step3 %}
+<div class="stepper-item active">
+{% endblock %}
+
+{% block step4 %}
+<div class="stepper-item ">
+{% endblock %}
+
+{% block content %}
+<div class="component">
+    <div class="title">Photos</div>
+    <div class="photo-tips">
+      <p class="subtitle">Tips</p>
+      <ul>
+        <li>Add as many as you can so buyers can see every detail.</li>
+        <li>Use daylight, no flash.</li>
+        <li>Put something common nearby for size.</li>
+        <li>Shoot against a clear backdrop.</li>
+        <li>Include pictures of different choices.</li>
+      </ul>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}<div class="overlap-group">
+        <!-- Add an ID to the rectangle for JavaScript targeting -->
+        <div class="rectangle" id="upload-trigger">
+          <label for="image-upload" class="text-wrapper-5">Add a photo</label>
+          <!-- Move the file input outside of the rectangle -->
+          <input type="file" id="image-upload" name="images" accept="image/*" style="display: none;" multiple>
+          <div class="text-wrapper-6">+</div>
+        </div>
+        <!-- Image preview container -->
+        <div class="image-preview-container">
+    {% for uploaded_image in uploaded_images %}
+    <img src="{{ uploaded_image.image.url }}" alt="Uploaded Image">
+    {% endfor %}
+        </div>
+      </div>
+      <button type="submit" class="btn">Upload</button>
+    </form>
+    
+  <div class="button-line">
+    <a href="{% url 'second_step' %}" ><button class="back btn"> ← BACK</button></a>
+    <a href="{% url 'fourth_step' %}" ><button class="btn">NEXT → </button></a>
+  </div><script>
+    // Get a reference to the file input element
+    const fileInput = document.getElementById('image-upload');
+    
+    // Get a reference to the rectangle element (upload-trigger)
+    const rectangle = document.getElementById('upload-trigger');
+    
+    // Add a click event listener to the rectangle
+    rectangle.addEventListener('click', () => {
+      // Trigger a click on the file input
+      fileInput.click();
+    });
+  </script>
+ 
+{% endblock %}

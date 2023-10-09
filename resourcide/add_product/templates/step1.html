@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{%block step1%}
+    <div class="stepper-item active">
+{%endblock%}
+
+{%block step2%}
+    <div class="stepper-item ">
+{%endblock%}
+
+{%block step3%}
+    <div class="stepper-item ">
+{%endblock%}
+
+{%block step4%}
+    <div class="stepper-item ">
+{%endblock%}
+
+{% block content %}
+    <h1>Name your product</h1>
+    <form method="post" action="{% url 'first_step' %}">
+        {% csrf_token %}
+        {% comment %} {{ form.name.label_tag }} {% endcomment %}
+        {{ form.name }}
+        {% comment %} {{ form.name.errors }} {% endcomment %}
+        <div class="note">
+            <p>○ Between 4-20 characters </p>
+            <p>○ No special characters, spaces, or accented letters</p>
+        </div>
+        <div class="tips">
+            <h3>Tips:</h3>
+            <ol>
+                <li>Clear and Descriptive: Choose a name that clearly describes your product's purpose and materials.</li>
+                <li>Relevance: Ensure the name connects directly to your product's features or concept.</li>
+                <li>Memorable: Pick a catchy name that's easy to remember.</li>
+                <li>Highlight Sustainability: If applicable, emphasize Eco-friendliness or recycling in the name.</li>
+                <li>Unique: Check for existing names to ensure yours is distinct and legally available</li>
+            </ol>
+        </div>
+        <input type="submit" value="NEXT →" class='btn'></input>
+    </form>
+{% endblock %}

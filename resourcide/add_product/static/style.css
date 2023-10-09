@@ -1,0 +1,203 @@
+
+.step-name {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+.stepper-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin: auto 50px;
+  }
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #1CA76C;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+  }
+  
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #1CA76C;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+  }
+  
+  .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid  #1CA76C;
+    margin-bottom: 6px;
+  }
+  
+  .stepper-item.active {
+    font-weight: bold;
+  }
+  
+  .active .step-name {
+    font-weight: bold;
+  }
+
+  .stepper-item.completed .step-counter {
+    background-image: url(./tick.jpg);
+    background-size: cover;
+  }
+
+  .stepper-item.active .step-counter {
+    background-color: #1CA76C;
+;
+  }
+  .stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #1CA76C;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+    background: #1CA76C;
+  }
+  
+  .stepper-item:first-child::before {
+    content: none;
+  }
+  .stepper-item:last-child::after {
+    content: none;
+  }
+
+  h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px auto; /* Center horizontally */
+    text-align: center; /* Center the text within the h1 element */
+    font-size: xxx-large;
+  }
+
+.form__input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    margin: 30px auto;
+    padding: 10px 15px;
+    border-radius: 0.2cm;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #b7bfbb; 
+    width: 500px;
+    display: flex;
+    position: relative; 
+    transition: all 0.3s;
+  }
+  
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+  }
+  
+.note {
+    font-size: 13px;
+    margin: auto;
+    width: 500px;
+    font-family: sans-serif;
+}
+
+.tips{
+    margin: auto;
+    width: 550px;
+    text-align: justify;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+.btn {
+  appearance: none;
+  background-color: #1CA76C;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 10px 28px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  left: 75%;
+}
+
+.btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #1CA76C;
+}
+
+.btn:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.btn:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.btn:active {
+  background-color: #1CA76C;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+a{
+  text-decoration: none !important;
+}
+.back {
+  align-self: left;
+}
+
+.button-line{
+  display: block;
+  position: relative;
+  right: 15px;
+}
+
+.component {
+  display: block;
+}

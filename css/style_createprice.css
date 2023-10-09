@@ -1,0 +1,46 @@
+.stepbar {
+    text-align: center;
+    margin-top: 85px;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #1CA76C;
+}
+
+.bigtext {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.main {
+   width: 38%;
+   margin: auto;
+}
+.main .item{
+    margin:10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.form-control{
+    box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
+    height: 45px;
+    background-color: rgba(244, 244, 244, 0.842);
+}
+
+.btn {
+    color: white;
+
+    padding: 15px 70px;
+    background-color: #1CA76C;
+    margin-left: 70%;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.btn:hover {
+ 
+    scale: 1.05;
+    transition: 0.2s;
+}
